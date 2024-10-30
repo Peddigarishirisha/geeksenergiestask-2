@@ -13,7 +13,7 @@ function Navbar() {
         <li>Talk to Us</li>
       </ul>
       <div className="profile-icon">
-      <i className="fa fa-bell"></i>
+      <img src="./notification.png"></img>
       <img src="./pic7.jpeg"></img>
       </div>
     </nav>

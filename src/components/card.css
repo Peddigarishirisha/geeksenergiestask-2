@@ -58,3 +58,14 @@ color: black;
 .flight-icon {
   margin-right: 8px;
 }
+.original-price {
+  font-size: 16px; /* Original price font size */
+  color: gray;
+  text-decoration: line-through; /* Strikethrough effect */
+}
+
+.discounted-price {
+  font-size: 20px; /* Slightly larger for emphasis */
+  color: black;
+  font-weight: bold;
+}

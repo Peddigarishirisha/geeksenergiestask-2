@@ -16,12 +16,13 @@ function PackageCard({ image, title, location, days, nights, price, originalPric
       <img src={image} alt={title} className="package-image" />
       <div className="package-info">
         <h3>{title}</h3>
-        <p ><img src="./flight.png"></img> Pickup: {location}</p>
+        <p><img src="./flight.png" alt="Flight icon" /> Pickup: {location}</p>
         <div className="duration">
-          <span> <img src="./timer.jpg"></img>{days} Days | {nights} Nights</span>
+          <span><img src="./timer.jpg" alt="Timer icon" /> {days} Days | {nights} Nights</span>
         </div>
-        <p className="price">
-          <span className="original-price">₹{originalPrice}</span> ₹{price}
+        <p className="price-section">
+          <span className="original-price">₹{originalPrice}</span>
+          <span className="discounted-price">₹{price}</span>
         </p>
         <button className="view-details">View Details</button>
       </div>

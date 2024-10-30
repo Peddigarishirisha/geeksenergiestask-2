@@ -13,14 +13,14 @@ function SearchFilter() {
         </div>
       </div>
       <div className="filter-option">
-        <i className="fa fa-calendar-alt"></i>
+       <img src="./calendar.png"></img>
         <div>
           <h4>11 Aug 2023</h4>
           <p style={{fontSize:"small"}}>Wednesday</p>
         </div>
       </div>
       <div className="filter-option">
-        <i className="fa fa-user"></i>
+       <img src="./profile-2user.png"></img>
         <div>
           <h4>2 Adults, 1 Child</h4>
           <p style={{fontSize:"small"}}>1 Room</p>
