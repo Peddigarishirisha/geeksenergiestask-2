@@ -1,0 +1,13 @@
+
+img{
+    height: 20px;
+
+}
+/* sort.css */
+.sort {
+    display: flex;
+   margin-right: auto;
+    align-items: flex-start; /* Aligns content to the left */
+    padding-left: 10px; /* Optional: Adds a bit of padding */
+  }
+  
