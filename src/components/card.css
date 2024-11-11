@@ -1,10 +1,10 @@
 .package-card {
   position: relative;
-  width: 380px; /* Base width for larger screens */
+  width: 300px; /* Base width for larger screens */
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto; /* Center the card with margin */
+  margin: 1px auto; /* Center the card with margin */
 }
 
 .package-image {
@@ -14,16 +14,16 @@
 }
 
 .view-details {
-  padding: 8px; /* Reduced padding for a less filled look */
+  padding: 5px; /* Reduced padding for a less filled look */
   border-radius: 5px; /* Rounded corners */
   color: white; /* Changed text color to ensure visibility */
-  background-color: rgb(245, 53, 53);
-  border: 1px solid rgb(236, 51, 51);
+  background-color: rgb(227, 9, 9);
+  border: 1px solid rgb(230, 18, 18);
   position: absolute;
   bottom: 10px; /* Position closer to the bottom */
-  left: 50%;
+  left: 70%;
   transform: translateX(-50%); /* Center the button horizontally */
-  width: 80%; /* Make button width flexible */
+  width: 30%; /* Make button width flexible */
   text-align: center; /* Center the text */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
@@ -52,7 +52,7 @@
 
 .duration {
   position: absolute;
-  top: 10px; /* Position near the top */
+  top: 170px; /* Position near the top */
   right: 10px;
   z-index: 1;
   border: 1px solid white;
@@ -64,7 +64,7 @@
 }
 
 .package-info {
-  padding: 16px;
+  padding: 5px;
   text-align: left; /* Align text to the left */
 }
 
@@ -84,64 +84,4 @@
   font-weight: bold;
 }
 
-/* Media Query for tablets (768px and below) */
-@media (max-width: 768px) {
-  .package-card {
-    width: 90%; /* Full width for tablets */
-    margin: 20px auto; /* Center the card */
-  }
 
-  .view-details {
-    width: 90%; /* Make button wider */
-    padding: 10px; /* Increase padding for better touch target */
-  }
-
-  .duration {
-    font-size: 14px; /* Adjust font size */
-  }
-
-  .heart-icon {
-    height: 30px; /* Maintain size */
-    width: 30px; /* Maintain size */
-  }
-
-  .package-info {
-    padding: 12px; /* Reduce padding on tablets */
-  }
-}
-
-/* Media Query for small screens (576px and below) */
-@media (max-width: 576px) {
-  .package-card {
-    width: 100%; /* Full width on small screens */
-    margin: 10px 0; /* Add margin for spacing */
-    border-radius: 5px; /* Adjust border radius */
-  }
-
-  .view-details {
-    width: 40%; /* Full width button */
-    bottom: 10px; /* Adjust position */
-    left: 70%;
-    transform: translateX(-50%); /* Center the button */
-    padding: 10px; /* Consistent padding */
-  }
-
-  .duration {
-    font-size: 12px;
-   top:150px;
-  }
-
-  .heart-icon {
-    height: 30px; /* Maintain size */
-    width: 30px; /* Maintain size */
-  }
-
-  .original-price,
-  .discounted-price {
-    font-size: 14px; /* Smaller font size for mobile */
-  }
-
-  .package-info {
-    padding: 10px; /* Further reduced padding for mobile */
-  }
-}
