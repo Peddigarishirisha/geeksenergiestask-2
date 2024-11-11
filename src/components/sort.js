@@ -4,12 +4,12 @@ import "./sort.css";
 const Sort = () => {
   return (
     <div className="sort">
-      <p>
+      <button>
        <img src="./frame.png" ></img> Sort by
-      </p>
-      <p>
+      </button>
+      <button>
         <img src="./filter.png"></img>Filter
-      </p>
+      </button>
     </div>
   );
 };
