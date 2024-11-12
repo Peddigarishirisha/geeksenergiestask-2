@@ -21,7 +21,7 @@
   height: 60px;
 }
 
-.update-button {
+button {
   background-color: #d50000;
   color: #fff;
   padding: 10px 20px;
@@ -32,6 +32,21 @@
   width: 300px;
   height: 70px;
 }
+.search-input {
+  padding: 20px;
+  margin: 0 10px;
+  border: 1px solid #ed0909;
+  border-radius: 5px;
+  width: 200px;
+  color: #f1f1f1;
+  background-color: #d50000;
+  font-size: 16px;
+}
+.search-input::placeholder {
+  color: white;
+  opacity: 1; /* Ensure full opacity */
+}
+
 
 /* Media Query for tablets (768px and below) */
 @media (max-width: 768px) {

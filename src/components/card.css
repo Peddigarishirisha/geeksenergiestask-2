@@ -1,35 +1,44 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Small gap to match the example layout */
+  justify-content: center;
+  padding: 20px 0; /* Padding at the top and bottom for breathing room */
+}
+
 .package-card {
   position: relative;
-  width: 300px; /* Base width for larger screens */
+  flex: 1 1 calc(60% - 5px); /* Adjusted to take 3 cards per row with minimal gap */
+  max-width: 462px; /* Adjusted width for responsiveness */
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 1px auto; /* Center the card with margin */
+  margin: 0; /* Remove individual margins */
 }
 
 .package-image {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .view-details {
-  padding: 5px; /* Reduced padding for a less filled look */
-  border-radius: 5px; /* Rounded corners */
-  color: white; /* Changed text color to ensure visibility */
+  padding: 4px 8px; /* Adjusted padding for the button */
+  border-radius: 5px;
+  color: white;
   background-color: rgb(227, 9, 9);
   border: 1px solid rgb(230, 18, 18);
   position: absolute;
-  bottom: 10px; /* Position closer to the bottom */
-  left: 70%;
-  transform: translateX(-50%); /* Center the button horizontally */
-  width: 30%; /* Make button width flexible */
-  text-align: center; /* Center the text */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  bottom: 10px;
+  left: 80%;
+  transform: translateX(-50%);
+  width: 30%;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
 .view-details:hover {
-  background-color: rgb(220, 45, 45); /* Darken on hover */
+  background-color: rgb(220, 45, 45);
 }
 
 .heart-icon {
@@ -39,33 +48,32 @@
   cursor: pointer;
   font-size: 1rem;
   z-index: 1;
-  border: 2px solid white; /* Border around the icon */
-  background-color: white; 
-  height: 25px; /* Adjusted size */
-  width: 25px; /* Adjusted size */
-  border-radius: 50%; /* Make it round */
-  padding: 5px; /* Inner padding */
+  border: 2px solid white;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
   display: flex;
-  align-items: center; /* Center the icon */
-  justify-content: center; /* Center the icon */
+  align-items: center;
+  justify-content: center;
 }
 
 .duration {
   position: absolute;
-  top: 170px; /* Position near the top */
-  right: 10px;
+  top: 10px; /* Positioned at the top left corner */
+  left: 10px;
   z-index: 1;
   border: 1px solid white;
   background-color: aliceblue;
-  height: 25px; /* Adjusted height for better fit */
-  padding: 4px 8px; /* Added padding */
+  height: 25px;
+  padding: 4px 8px;
   border-radius: 8px;
-  font-size: 12px; /* Adjusted font size */
+  font-size: 12px;
 }
 
 .package-info {
-  padding: 5px;
-  text-align: left; /* Align text to the left */
+  padding: 10px 15px;
+  text-align: left;
 }
 
 .flight-icon {
@@ -73,15 +81,13 @@
 }
 
 .original-price {
-  font-size: 16px; /* Original price font size */
+  font-size: 16px;
   color: gray;
-  text-decoration: line-through; /* Strikethrough effect */
+  text-decoration: line-through;
 }
 
 .discounted-price {
-  font-size: 20px; /* Slightly larger for emphasis */
+  font-size: 20px;
   color: black;
   font-weight: bold;
 }
-
-

@@ -4,7 +4,7 @@ img {
 
 .sort {
     display: flex;
-    gap: 10px;
+    gap: 10gpx;
     position: relative;
     margin-left: 1300px; /* Adjust as needed for larger screens */
 }

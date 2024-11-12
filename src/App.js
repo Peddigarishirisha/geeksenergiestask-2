@@ -1,5 +1,5 @@
 // App.js
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar";
 import SearchFilter from "./components/search";
 import PackageCard from "./components/card";
@@ -10,8 +10,11 @@ import Sort from "./components/sort";
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-/>
+/>;
+
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   const packages = [
     {
       image: "./pic6.jpeg",
@@ -70,14 +73,22 @@ function App() {
     }
   ];
 
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
+  const filteredPackages = packages.filter((pkg) =>
+    pkg.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="app">
       <Navbar />
-      <FontAwesomeLink></FontAwesomeLink>
-      <SearchFilter />
-      <Sort></Sort>
+      <FontAwesomeLink />
+      <SearchFilter onSearch={handleSearch} />
+      <Sort />
       <div className="package-list">
-        {packages.map((pkg, index) => (
+        {filteredPackages.map((pkg, index) => (
           <PackageCard key={index} {...pkg} />
         ))}
       </div>
