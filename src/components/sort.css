@@ -8,7 +8,7 @@ img {
     padding: 5px;
     height: 50px;
     position: relative;
-    margin-left: 1300px; /* Adjust as needed for larger screens */
+    margin-left: 1200px; /* Adjust as needed for larger screens */
 }
 .sort button {
     background-color: #f0f4f7; /* Set your desired color */
