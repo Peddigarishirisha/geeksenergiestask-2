@@ -61,8 +61,8 @@
 
 .duration {
   position: absolute;
-  top: 280px; /* Positioned at the top left corner */
-  left: 300px;
+  top:  240px; /* Positioned at the top left corner */
+  left: 250px;
   z-index: 1;
   border: 1px solid white;
   background-color: aliceblue;
