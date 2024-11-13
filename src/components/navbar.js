@@ -13,8 +13,8 @@ function Navbar() {
         <li>Talk to Us</li>
       </ul>
       <div className="profile-icon">
-      <img src="./notification.png"></img>
-      <img src="./pic7.jpeg"></img>
+      <img src="/notification.png"></img>
+      <img src="/pic7.jpeg"></img>
       </div>
     </nav>
   );

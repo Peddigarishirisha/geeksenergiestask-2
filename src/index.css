@@ -19,7 +19,7 @@ code {
 
 .package-list {
   display: flex;
-  gap: 190px;
+  gap: 70px;
   flex-wrap: wrap;
 }
 

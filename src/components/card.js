@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./card.css";
 
-function PackageCard({ image, title, location, days, nights, price, originalPrice }) {
+
+function PackageCard({ id, image, title, location, days, nights, price, originalPrice }) {
   const [isFavorite, setIsFavorite] = useState(false);
+  const navigate = useNavigate();
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);
+  };
+
+  const handleViewDetails = () => {
+    navigate(`/details/${id}`);
   };
 
   return (
@@ -24,7 +31,7 @@ function PackageCard({ image, title, location, days, nights, price, originalPric
           <span className="original-price">₹{originalPrice}</span>
           <span className="discounted-price">₹{price}</span>
         </p>
-        <button className="view-details">View Details</button>
+        <button className="view-details" onClick={handleViewDetails}>View Details</button>
       </div>
     </div>
   );

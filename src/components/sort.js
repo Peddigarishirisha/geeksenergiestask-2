@@ -5,10 +5,10 @@ const Sort = () => {
   return (
     <div className="sort">
       <button>
-       <img src="./frame.png" ></img> Sort by
+       <img src="/frame.png" ></img> Sort by
       </button>
       <button>
-        <img src="./filter.png"></img>Filter
+        <img src="/filter.png"></img>Filter
       </button>
     </div>
   );

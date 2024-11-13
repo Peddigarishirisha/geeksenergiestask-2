@@ -21,14 +21,14 @@ function SearchFilter({ onSearch }) {
         </div>
       </div>
       <div className="filter-option">
-        <img src="./calendar.png" alt="Calendar icon" />
+        <img src="/calendar.png" alt="Calendar icon" />
         <div>
           <h4>11 Aug 2023</h4>
           <p style={{ fontSize: "small" }}>Wednesday</p>
         </div>
       </div>
       <div className="filter-option">
-        <img src="./profile-2user.png" alt="Profile icon" />
+        <img src="/profile-2user.png" alt="Profile icon" />
         <div>
           <h4>2 Adults, 1 Child</h4>
           <p style={{ fontSize: "small" }}>1 Room</p>

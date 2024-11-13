@@ -1,23 +1,20 @@
-// App.js
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import SearchFilter from "./components/search";
 import PackageCard from "./components/card";
-import "./App.css";
-import FontAwesomeLink from "./components/link";
 import Sort from "./components/sort";
-
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-/>;
+import PackageDetails from "./components/packagedetails"; // New component for package details
+import "./App.css";
+import FontAwesomeLink from "./components/link.js"
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const packages = [
     {
-      image: "./pic6.jpeg",
+      id: 1,
+      image: "/pic6.jpeg",
       title: "Munnar Thekkady Alleppey and Kovalam tour",
       location: "Cochin Airport / Railway Station",
       days: 6,
@@ -26,7 +23,8 @@ function App() {
       originalPrice: "32,579",
     },
     {
-      image: "./new1.jpeg",
+      id: 2,  // Add a unique ID here
+      image: "/new1.jpeg",
       title: "Discover Kashmir & Ladak",
       location: "Srinagar Airport",
       days: 4,
@@ -35,7 +33,8 @@ function App() {
       originalPrice: "32,579",
     },
     {
-      image: "./pic3.jpeg",
+      id: 3,  // Add a unique ID here
+      image: "/pic3.jpeg",
       title: "Cochin Munnar Thekkady and Cherrai tour",
       location: "Cochin Airport",
       days: 3,
@@ -43,9 +42,9 @@ function App() {
       price: "25,800",
       originalPrice: "32,579",
     },
-    // New Packages
     {
-      image: "./pic3.jpeg",
+      id: 4,  // Add a unique ID here
+      image: "/pic3.jpeg",
       title: "Golden Triangle Tour: Delhi, Agra, Jaipur",
       location: "Delhi Airport",
       days: 7,
@@ -54,7 +53,8 @@ function App() {
       originalPrice: "55,000",
     },
     {
-      image: "./new2.jpeg",
+      id: 5,  // Add a unique ID here
+      image: "/new2.jpeg",
       title: "Andaman Island Adventure",
       location: "Port Blair Airport",
       days: 5,
@@ -63,7 +63,8 @@ function App() {
       originalPrice: "42,000",
     },
     {
-      image: "./pic6.jpeg",
+      id: 6,  // Add a unique ID here
+      image: "/pic6.jpeg",
       title: "Goa Beach Holiday",
       location: "Goa Airport",
       days: 4,
@@ -72,6 +73,9 @@ function App() {
       originalPrice: "25,000",
     }
   ];
+  
+
+
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -82,17 +86,27 @@ function App() {
   );
 
   return (
-    <div className="app">
-      <Navbar />
-      <FontAwesomeLink />
-      <SearchFilter onSearch={handleSearch} />
-      <Sort />
-      <div className="package-list">
-        {filteredPackages.map((pkg, index) => (
-          <PackageCard key={index} {...pkg} />
-        ))}
+    <Router>
+      <div className="app">
+        <Navbar />
+        <FontAwesomeLink></FontAwesomeLink>
+        <SearchFilter onSearch={handleSearch} />
+        <Sort />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="package-list">
+                {filteredPackages.map((pkg) => (
+                  <PackageCard key={pkg.id} {...pkg} />
+                ))}
+              </div>
+            }
+          />
+          <Route path="/details/:id" element={<PackageDetails packages={packages} />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
