@@ -7,7 +7,7 @@ function PackageDetails({ packages }) {
   const packageDetails = packages.find(pkg => pkg.id === parseInt(id));
 
   if (!packageDetails) {
-    return <div>Package not found</div>;
+    return <div>Package not found  </div>;
   }
 
   return (
