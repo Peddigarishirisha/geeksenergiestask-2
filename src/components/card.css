@@ -9,7 +9,7 @@
 .package-card {
   position: relative;
   flex: 1 1 calc(60% - 5px); /* Adjusted to take 3 cards per row with minimal gap */
-  max-width: 450px; /* Adjusted width for responsiveness */
+  max-width: 400px; /* Adjusted width for responsiveness */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
